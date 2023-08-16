@@ -7,7 +7,589 @@
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="css/output.css" />
   </head>
-  <body>
-    
+  <body
+    class="bg-mainbg w-full font-Inter p-0 m-0 box-border bg-no-repeat relative"
+  >
+    <!-- Naviagtion -->
+    <nav class="sticky top-0 left-0 right-0 py-5 bg-mainColor w-full z-10">
+      <!-- Nav Container -->
+      <div class="flex justify-between items-center w-10/12 mx-auto">
+        <!-- Logo Area -->
+        <div class="flex gap-5 items-center justify-center cursor-pointer">
+          <img src="img/logo.png" alt="Logo" class="w-12" srcset="" />
+          <h3 class="text-3xl font-Inter font-semibold leading-normal">Fudo</h3>
+        </div>
+        <!-- Lists -->
+        <div class="hidden lg:flex gap-10 justify-center items-start">
+          <li class="flex flex-col items-center li_">
+            <a href="#" class="text-primaryColorLight text-xl">Why Fudo?</a>
+            <div class="w-2 h-2 rounded-full bg-primaryColorLight dot"></div>
+          </li>
+          <li class="flex flex-col items-center li_">
+            <a href="#" class="text-black text-xl">Services</a>
+            <div class="w-2 h-2 rounded-full dot"></div>
+          </li>
+          <li class="flex flex-col items-center li_">
+            <a href="#" class="text-black text-xl">Menu</a>
+            <div class="w-2 h-2 rounded-full dot"></div>
+          </li>
+          <li class="flex flex-col items-center li_">
+            <a href="#" class="text-black text-xl">Contact</a>
+            <div class="w-2 h-2 rounded-full dot"></div>
+          </li>
+        </div>
+        <!-- Buttons -->
+        <div class="hidden lg:flex gap-8 items-center justify-center">
+          <iconify-icon
+            icon="iconamoon:search"
+            class="text-black text-3xl cursor-pointer"
+          ></iconify-icon>
+          <iconify-icon
+            icon="ion:cart-outline"
+            class="text-black text-3xl cursor-pointer"
+          ></iconify-icon>
+          <!-- Logout btn -->
+          <div
+            class="bg-primaryColor px-10 py-3 rounded-full flex gap-2 items-center justify-center"
+          >
+            <iconify-icon
+              icon="material-symbols:logout"
+              class="text-white text-2xl"
+            ></iconify-icon>
+            <p class="text-white text-xl">Logout</p>
+          </div>
+        </div>
+        <!-- Mobile Nav Button -->
+        <iconify-icon
+          icon="material-symbols:menu"
+          class="text-3xl cursor-pointer lg:hidden"
+          id="slide_menu_btn"
+        ></iconify-icon>
+      </div>
+    </nav>
+    <!-- Let's work on the side menu -->
+    <div
+      class="fixed right-0 top-0 w-3/4 h-screen bg-mainbg bg-no-repeat z-10 lg:hidden side_menu"
+    >
+      <!-- Container -->
+      <div class="w-full h-screen relative">
+        <!-- Lists -->
+        <ul
+          class="flex gap-10 justify-center items-center flex-col absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+        >
+          <li class="flex flex-col items-center li_">
+            <a href="#" class="text-primaryColorLight text-xl">Why Fudo?</a>
+            <div class="w-2 h-2 rounded-full bg-primaryColorLight dot"></div>
+          </li>
+          <li class="flex flex-col items-center li_">
+            <a href="#" class="text-black text-xl">Services</a>
+            <div class="w-2 h-2 rounded-full dot"></div>
+          </li>
+          <li class="flex flex-col items-center li_">
+            <a href="#" class="text-black text-xl">Menu</a>
+            <div class="w-2 h-2 rounded-full dot"></div>
+          </li>
+          <li class="flex flex-col items-center li_">
+            <a href="#" class="text-black text-xl">Contact</a>
+            <div class="w-2 h-2 rounded-full dot"></div>
+          </li>
+        </ul>
+        <!--  Close button -->
+        <iconify-icon
+          icon="material-symbols:close"
+          class="text-4xl cursor-pointer absolute top-10 right-10"
+          id="slide_close_btn"
+        ></iconify-icon>
+
+        <!-- Down Button -->
+        <div
+          class="flex gap-8 items-center justify-center absolute left-0 right-0 bottom-0 py-5"
+        >
+          <iconify-icon
+            icon="iconamoon:search"
+            class="text-black text-3xl cursor-pointer"
+          ></iconify-icon>
+          <iconify-icon
+            icon="ion:cart-outline"
+            class="text-black text-3xl cursor-pointer"
+          ></iconify-icon>
+          <!-- Logout btn -->
+          <div
+            class="bg-primaryColor px-10 py-3 rounded-full flex gap-2 items-center justify-center"
+          >
+            <iconify-icon
+              icon="material-symbols:logout"
+              class="text-white text-2xl"
+            ></iconify-icon>
+            <p class="text-white text-xl">Logout</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main class="w-[80vw] mx-auto pt-20">
+      <!-- Hero Section -->
+      <section class="flex justify-between items-center py-10 mx-auto w-[80vw]">
+        <!-- Left Area -->
+        <div
+          class="flex flex-col items-center justify-center w-full lg:w-[50%] lg:items-start"
+        >
+          <!-- First Section -->
+          <div class="flex flex-col items-center gap-5 lg:items-start">
+            <div
+              class="flex items-center justify-center bg-primaryColorSuperLight py-5 px-10 rounded-full text-xl text-primaryColorLight"
+            >
+              More Than Faster
+            </div>
+            <h1
+              class="capitalize text-4xl font-semibold text-black leading-snug text-center lg:text-left lg:text-7xl"
+            >
+              be the fastest <br />in delivering <br />
+              your <span class="text-primaryColorLight">food</span>
+            </h1>
+            <p class="text-xl text-center lg:text-left">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo
+              possimus ab porro nobis nisi perspiciatis?
+            </p>
+            <div class="flex items-center justify-center flex-col gap-10">
+              <!-- Get Started button -->
+              <div
+                class="flex items-center justify-center bg-primaryColorLight text-white py-5 px-10 rounded-full cursor-pointer text-2xl font-medium"
+              >
+                Get Started
+              </div>
+              <!-- Play -->
+              <div class="flex justify-center items-center gap-5">
+                <div
+                  class="flex items-center justify-center shadow-lg w-[5em] h-[5em] rounded-full"
+                >
+                  <iconify-icon
+                    icon="ph:play"
+                    class="text-primaryColorLight text-3xl"
+                  ></iconify-icon>
+                </div>
+                <p class="text-3xl font-medium">Watch Video</p>
+              </div>
+            </div>
+          </div>
+          <!-- Second Section -->
+          <div class="pt-10 flex items-center flex-col lg:flex-row">
+            <!-- Stacked Images -->
+            <div class="relative flex w-[14em]">
+              <img src="img/Ellipse 3.png" class="w-[7em]" alt="" />
+              <img
+                src="img/Ellipse 4.png"
+                class="w-[7em] -translate-x-[3.5em]"
+                alt=""
+              />
+              <img
+                src="img/Ellipse 5.png"
+                class="w-[7em] -translate-x-[7em]"
+                alt=""
+              />
+            </div>
+            <!-- rating Section -->
+            <div class="flex flex-col items-center justify-center">
+              <p class="text-2xl capitalize font-normal">our happy customer</p>
+              <div class="flex items-center gap-2 justify-center">
+                <iconify-icon
+                  icon="material-symbols:star"
+                  class="text-yellow-400 text-4xl"
+                ></iconify-icon>
+                <p class="text-2xl font-medium">4.8</p>
+                <div class="text-2xl font-medium text-gray-400">
+                  (12.6k Reviews)
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Right Area -->
+        <div class="hidden lg:flex w-1/2 items-center justify-center">
+          <img src="img/image grounp.png" class="object-cover" alt="" />
+        </div>
+      </section>
+      <!-- What we serve section -->
+      <section
+        class="flex flex-col w-full h-full items-center justify-around lg:h-screen"
+      >
+        <div class="flex flex-col justify-center items-center">
+          <h3 class="text-primaryColorLight uppercase text-2xl font-medium">
+            what we serve
+          </h3>
+          <h1
+            class="text-2xl font-semibold text-black capitalize text-center lg:text-5xl"
+          >
+            your favourite food <br />
+            delivery patner
+          </h1>
+        </div>
+        <!-- Illustrations -->
+        <div
+          class="flex justify-between w-[80vw] mx-auto items-center flex-col lg:flex-row"
+        >
+          <!-- illustration 1 -->
+          <div class="flex flex-col items-center w-10/12">
+            <img
+              src="img/image 3.png"
+              class="h-[20vh] object-contain lg:h-[50vh]"
+              alt=""
+            />
+            <h3
+              class="capitalize text-2x lg:text-4xl font-semibold leading-loose"
+            >
+              easy to order
+            </h3>
+            <p class="text-sm text-center text-gray-600 lg:text-xl">
+              Lorem ipsum dolor sit amet consectetur adipisicing.
+            </p>
+          </div>
+          <!-- illustration 2 -->
+          <div class="flex flex-col items-center w-10/12">
+            <img
+              src="img/image 4.png"
+              class="h-[20vh] object-contain lg:h-[50vh]"
+              alt=""
+            />
+            <h3
+              class="capitalize text-2x lg:text-4xl font-semibold leading-loose"
+            >
+              fastest delivery
+            </h3>
+            <p class="text-sm text-center text-gray-600 lg:text-xl">
+              Lorem ipsum dolor sit amet consectetur adipisicing.
+            </p>
+          </div>
+          <!-- illustration 3 -->
+          <div class="flex flex-col items-center w-10/12">
+            <img
+              src="img/image 5.png"
+              class="h-[20vh] object-contain lg:h-[50vh]"
+              alt=""
+            />
+            <h3
+              class="capitalize text-2x lg:text-4xl font-semibold leading-loose"
+            >
+              best quality
+            </h3>
+            <p class="text-sm text-center text-gray-600 lg:text-xl">
+              Lorem ipsum dolor sit amet consectetur adipisicing.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Our Menu Section -->
+      <section
+        class="flex items-center justify-center h-full flex-col py-5 lg:h-screen"
+      >
+        <!-- top section -->
+        <div
+          class="flex justify-between items-start w-full flex-col lg:flex-row"
+        >
+          <!-- Left Side -->
+          <div class="flex flex-col items-start">
+            <h3 class="text-primaryColorLight uppercase text-2xl font-medium">
+              our menu
+            </h3>
+            <h1
+              class="text-2xl font-semibold text-black capitalize lg:text-5xl"
+            >
+              menu that always <br />
+              make you fall in love
+            </h1>
+          </div>
+          <!-- Right Side -->
+          <div
+            class="flex items-baseline gap-5 w-full justify-between lg:w-auto"
+          >
+            <div
+              class="flex w-[5em] h-[5em] bg-mainColor items-center justify-center rounded-full cursor-pointer prev"
+            >
+              <iconify-icon
+                icon="teenyicons:left-outline"
+                class="text-black text-3xl"
+              ></iconify-icon>
+            </div>
+            <div
+              class="flex w-[5em] h-[5em] bg-primaryColor items-center justify-center rounded-full cursor-pointer next"
+            >
+              <iconify-icon
+                icon="teenyicons:right-outline"
+                class="text-white text-3xl"
+              ></iconify-icon>
+            </div>
+          </div>
+        </div>
+        <!-- Bottom Section -->
+        <div
+          class="flex justify-between items-center w-full flex-col lg:flex-row"
+        >
+          <!-- List of Items -->
+          <div
+            class="flex w-full flow-row justify-between items-center overflow-auto px-5 list_items lg:w-[20%] lg:h-[70vh] lg:justify-center lg:flex-col"
+          >
+            <!-- Item 1 -->
+            <div
+              class="flex gap-5 items-center justify-start bg-primaryColorLight mx-5 cursor-pointer mb-5 py-3 px-3 rounded-full item"
+            >
+              <div
+                class="w-16 h-16 flex items-center justify-center rounded-full bg-white img_area"
+              >
+                <img src="img/image 6.png" alt="Burger" />
+              </div>
+              <p class="text-xl text-white hidden lg:inline">Burger</p>
+            </div>
+            <!-- Item 2 -->
+            <div
+              class="flex gap-5 items-center justify-start mx-5 cursor-pointer mb-5 py-3 px-3 rounded-full item"
+            >
+              <div
+                class="w-16 h-16 flex items-center justify-center rounded-full bg-white img_area"
+              >
+                <img src="img/image 7.png" alt="Pizza" />
+              </div>
+              <p class="text-xl text-black hidden lg:inline">Pizza</p>
+            </div>
+            <!-- Item 3-->
+            <div
+              class="flex gap-5 items-center justify-start mx-5 cursor-pointer mb-5 py-3 px-3 rounded-full item"
+            >
+              <div
+                class="w-16 h-16 flex items-center justify-center rounded-full bg-white img_area"
+              >
+                <img src="img/image 8.png" alt="Cake" />
+              </div>
+              <p class="text-xl text-black hidden lg:inline">Cake</p>
+            </div>
+            <!-- Item 4-->
+            <div
+              class="flex gap-5 items-center justify-start mx-5 cursor-pointer mb-5 py-3 px-3 rounded-full item"
+            >
+              <div
+                class="w-16 h-16 flex items-center justify-center rounded-full bg-white img_area"
+              >
+                <img src="img/image 9.png" alt="Ramen" />
+              </div>
+              <p class="text-xl text-black hidden lg:inline">Ramen</p>
+            </div>
+            <!-- Item 5-->
+            <div
+              class="flex gap-5 items-center justify-start mx-5 cursor-pointer mb-5 py-3 px-3 rounded-full item"
+            >
+              <div
+                class="w-16 h-16 flex items-center justify-center rounded-full bg-white img_area"
+              >
+                <img src="img/image 10.png" alt="ice Cream" />
+              </div>
+              <p class="text-xl text-black hidden lg:inline">ice Cream</p>
+            </div>
+          </div>
+          <!-- Slider -->
+          <div
+            class="flex overflow-hidden gap-5 pizza_cont w-[90vw] h-[70vh] lg:w-[65%]"
+          >
+            <!-- Item 1 -->
+            <div
+              class="flex items-end justify-start min-w-[90%] bg-[url('../img/pizza-1.jpg')] bg-cover bg-no-repeat bg-center rounded-2xl p-5 lg:min-w-[50%]"
+            >
+              <div class="flex flex-col">
+                <h2 class="text-white text-3xl font-semibold">Italian Pizza</h2>
+                <div class="flex gap-2 justify-center items-start">
+                  <p class="text-4xl text-white">
+                    <small class="text-yellow-300">$</small>7.77
+                  </p>
+                  <iconify-icon
+                    icon="teenyicons:right-outline"
+                    class="text-white text-2xl"
+                  ></iconify-icon>
+                </div>
+              </div>
+            </div>
+            <!-- Item 2 -->
+            <div
+              class="flex items-end justify-start min-w-[90%] bg-[url('../img/pizza-2.jpg')] bg-cover bg-no-repeat bg-center rounded-2xl p-5 lg:min-w-[50%]"
+            >
+              <div class="flex flex-col">
+                <h2 class="text-white text-3xl font-semibold">Indian Pizza</h2>
+                <div class="flex gap-2 justify-center items-start">
+                  <p class="text-4xl text-white">
+                    <small class="text-yellow-300">$</small>5.77
+                  </p>
+                  <iconify-icon
+                    icon="teenyicons:right-outline"
+                    class="text-white text-2xl"
+                  ></iconify-icon>
+                </div>
+              </div>
+            </div>
+            <!-- Item 3 -->
+            <div
+              class="flex items-end justify-start min-w-[90%] bg-[url('../img/pizza-3.jpg')] bg-cover bg-no-repeat bg-center rounded-2xl p-5 lg:min-w-[50%]"
+            >
+              <div class="flex flex-col">
+                <h2 class="text-white text-3xl font-semibold">
+                  Canadian Pizza
+                </h2>
+                <div class="flex gap-2 justify-center items-start">
+                  <p class="text-4xl text-white">
+                    <small class="text-yellow-300">$</small>4.77
+                  </p>
+                  <iconify-icon
+                    icon="teenyicons:right-outline"
+                    class="text-white text-2xl"
+                  ></iconify-icon>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Testimonials -->
+      <div
+        class="flex w-full h-full justify-center items-center flex-col lg:flex-row"
+      >
+        <!-- image Section -->
+        <div class="w-full lg:w-1/2">
+          <img
+            src="img/section image.png"
+            alt="Section image"
+            class="object-cover"
+          />
+        </div>
+        <!-- text info -->
+        <div
+          class="flex flex-col w-full items-start justify-center gap-5 lg:w-1/2"
+        >
+          <h3 class="text-primaryColorLight uppercase text-2xl font-medium">
+            our menu
+          </h3>
+          <h1 class="text-2xl font-semibold text-black capitalize lg:text-5xl">
+            What our customers <br />
+            say about us
+          </h1>
+          <p class="text-xl text-gray-400">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae
+            officia expedita eius corporis harum? Iste in rerum porro obcaecati
+            dolorem fugit dolor, accusantium consequuntur voluptatibus quibusdam
+            iure, laborum voluptatem sit.
+          </p>
+          <!-- theresa area -->
+          <div class="flex justify-center items-center gap-5 mt-5">
+            <!-- image Area -->
+            <div class="w-20 h-20">
+              <img src="img/Ellipse 15.png" alt="" />
+            </div>
+            <!-- text Area -->
+            <div class="flex flex-col">
+              <div class="text-2xl font-bold">Theresa jordan</div>
+              <p class="text-xl text-gray-400">Food Enthusiast</p>
+            </div>
+          </div>
+          <!-- rating -->
+          <div class="flex justify-center items-center gap-3">
+            <!-- Stars -->
+            <div class="flex justify-center items-center">
+              <iconify-icon
+                icon="material-symbols:star"
+                class="text-yellow-400 text-4xl"
+              ></iconify-icon>
+              <iconify-icon
+                icon="material-symbols:star"
+                class="text-yellow-400 text-4xl"
+              ></iconify-icon>
+              <iconify-icon
+                icon="material-symbols:star"
+                class="text-yellow-400 text-4xl"
+              ></iconify-icon>
+              <iconify-icon
+                icon="material-symbols:star"
+                class="text-yellow-400 text-4xl"
+              ></iconify-icon>
+              <iconify-icon
+                icon="mdi:star-outline"
+                class="text-yellow-400 text-4xl"
+              ></iconify-icon>
+            </div>
+            <!-- Rating number -->
+            <p class="text-2xl font-semibold">4.0</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="flex w-[80%] mx-auto py-10 justify-between items-center flex-col lg:flex-row"
+    >
+      <!-- Item 1 -->
+      <div class="flex items-start justify-center w-full mt-5 flex-col gap-5 lg:mt-0 lg:w-1/5">
+        <!-- logo area -->
+        <div class="flex gap-5 items-start justify-center">
+          <img src="img/logo.png" alt="Logo" class="w-12" />
+          <h3 class="text-3xl font-Inter font-semibold leading-normal">Fudo</h3>
+        </div>
+        <!-- Text Area -->
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque impedit
+          sit atque, vero qui corporis ullam mollitia tenetur architecto ut sint
+          distinctio odit dolore aliquam?
+        </p>
+        <!-- Social Links -->
+        <div class="flex w-full gap-10 items-center">
+          <iconify-icon
+            icon="mdi:instagram"
+            class="text-primaryColorLight text-4xl"
+          ></iconify-icon>
+          <iconify-icon
+            icon="mdi:facebook-outline"
+            class="text-primaryColorLight text-4xl"
+          ></iconify-icon>
+          <iconify-icon
+            icon="mdi:twitter-outline"
+            class="text-primaryColorLight text-4xl"
+          ></iconify-icon>
+        </div>
+      </div>
+      <!-- Item 2 -->
+      <div class="flex items-start justify-center w-full mt-5 flex-col gap-5 lg:mt-0 lg:w-1/5">
+        <h3 class="text-3xl">About</h3>
+        <ul class="flex-flex-col justify-center items-start gap-2">
+          <li class="text-xl text-gray-600 cursor-pointer">About Us</li>
+          <li class="text-xl text-gray-600 cursor-pointer">Features</li>
+          <li class="text-xl text-gray-600 cursor-pointer">News</li>
+          <li class="text-xl text-gray-600 cursor-pointer">Menu</li>
+        </ul>
+      </div>
+      <!-- Item 3 -->
+      <div class="flex items-start justify-center w-full mt-5 flex-col gap-5 lg:mt-0 lg:w-1/5">
+        <h3 class="text-3xl">Company</h3>
+        <ul class="flex-flex-col justify-center items-start gap-2">
+          <li class="text-xl text-gray-600 cursor-pointer">Why Fudo?</li>
+          <li class="text-xl text-gray-600 cursor-pointer">Patner with us</li>
+          <li class="text-xl text-gray-600 cursor-pointer">FAQ</li>
+          <li class="text-xl text-gray-600 cursor-pointer">Blog</li>
+        </ul>
+      </div>
+      <!-- Item 4 -->
+      <div class="flex items-start justify-center w-full mt-5 flex-col gap-5 lg:mt-0 lg:w-1/5">
+        <h3 class="text-3xl">Get in touch</h3>
+        <ul class="flex-flex-col justify-center items-start gap-2">
+          <li class="text-xl text-gray-600 cursor-pointer">Question or Quary</li>
+          <li class="text-xl text-gray-600 cursor-pointer">we are here!</li>
+        </ul>
+        <!-- Send Email -->
+        <div class="flex p-5 rounded-full border-black border justify-center items-center gap-3 w-full cursor-pointer">
+          <p class="text-xl text-gray-500">Send Email</p>
+
+          <iconify-icon
+            icon="akar-icons:send"
+            class="text-primaryColorLight text-3xl"
+          ></iconify-icon>
+        </div>
+      </div>
+    </footer>
+    <!-- Thats all for this video thanks for watching -->
+    <!-- Iconify CDN -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="main.js"></script>
   </body>
 </html>

@@ -6,3 +6,44 @@
   font-family: "Inter";
   src: url("../fonts/Inter/static/Inter-Regular.ttf");
 }
+.li_:hover .dot {
+  background-color: #f54748;
+}
+.li_:hover a {
+  color: #f54748;
+}
+.side_menu {
+  transform: translate(200vw, 0);
+  transition: all 0.5s ease;
+}
+.side_menu.active {
+  transform: translate(0, 0);
+}
+.item{
+  transition: all .5s;
+}
+.item:hover{
+  background: #f54748;
+}
+.item:hover p{
+  color: #fff;
+}
+::-webkit-scrollbar{
+  width: 10px;
+}
+::-webkit-scrollbar-track{
+  background: #f2f2f2;
+}
+::-webkit-scrollbar-thumb{
+  background: #f54748;
+}
+.list_items{
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.list_items::-webkit-scrollbar{
+  display: none;
+}
+*{
+  scroll-behavior: smooth;
+}
